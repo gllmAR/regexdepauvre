@@ -1,0 +1,35 @@
+#N canvas 683 0 683 746 12;
+#X obj 41 233 print;
+#X obj 40 126 regexdepauvre _ \ ;
+#X obj 49 152 list prepend set;
+#X obj 49 176 list trim;
+#X msg 49 201 list\ with\ underscore\  and spaces 488 3883;
+#X obj 39 65 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 40 98 list_with_underscore_ and spaces and number too 488 3883
+;
+#X text 153 182 Todo \; correcly handle escaped spaces in pd to list
+separator;
+#X obj 46 451 print;
+#X obj 54 370 list prepend set;
+#X obj 54 394 list trim;
+#X msg 54 419 and spaces and number too 488 3883;
+#X obj 44 283 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 172 125 <- backslash and a space to create char 32 \; );
+#X obj 45 344 regexdepauvre \\\, _;
+#X msg 45 312 list \, with \, comma \, and spaces and number too 488
+3883;
+#X text 194 380 Todo \; correcly handle escaped list separator;
+#X connect 1 0 0 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 12 0 15 0;
+#X connect 14 0 8 0;
+#X connect 14 0 9 0;
+#X connect 15 0 14 0;
